@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Belajar Membaca</string>
+    <string name="button_utama">Mulai Belajar</string>
+    <string name="bt_hurufC">Huruf C</string>
+    <string name="bt_hurufO">Huruf O</string>
+    <string name="bt_hurufK">Huruf K</string>
+    <string name="bt_hurufR">Huruf R</string>
+    <string name="isi_hurufC">
+    \tHuruf C merupakan huruf ke-3 dari 26 Alfabet dalam Bahasa Indonesia setelah A dan B. Huruf C merupakan huruf konsonan yang memiliki bunyi "ce" seperti dalam kata "cepat". Huruf C juga dapat digabungkan dengan huruf lain untuk membentuk konsonan ganda seperti "cc" dalam kata "acca".
+    </string>
+    <string name="isi_hurufO">
+    \tHuruf "O" adalah salah satu huruf vokal urutan ke-15 dalam alfabet Indonesia. Di antara 26 huruf alfabet, huruf "O" memiliki bentuk lingkaran dengan satu titik di tengahnya.
+
+    \tSecara fisik, cara mengucapkan huruf "O" adalah dengan membuka mulut lebar-lebar dan membiarkan suara keluar melalui rongga mulut tanpa hambatan dari bibir atau gigi.
+    </string>
+    <string name="isi_hurufK">
+    \tHuruf "K" dalam bahasa Indonesia merupakan huruf urutan ke-11 dan merupakan konsonan dalam alfabet Indonesia yang memiliki bentuk garis vertikal dan garis miring pada ujung bawahnya.
+
+    \tHuruf "K" diucapkan dengan menggerakkan lidah dan bibir untuk membentuk suara konsonan yang dikenal sebagai konsonan letupan atau plosif. Digunakan sebagai huruf awal atau tengah dalam pembentukan kata-kata. Contohnya, kata "kunci" , "komputer", "kucing", dan "kaki".
+    </string>
+    <string name="isi_hurufR">
+    \tHuruf "R" adalah salah satu huruf yang berada pada urutan ke-18 dari 26 alfabet Indonesia. Bentuknya seperti garis melengkung dengan tonjolan kecil di bawahnya. Ketika kita mengucapkan huruf "R", lidah kita harus menekan gigi depan atas dan menghasilkan bunyi khas yang mirip dengan suara gemeretak.
+
+    Dalam bahasa Indonesia, huruf "R" sering digunakan sebagai awalan, akhiran, atau bagian dari sebuah kata. Misalnya, kata "rumah", "roti", dan "burung".
+    </string>
+
+</resources>
