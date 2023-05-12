@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PencatatSkor</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="day_mode">Day Mode</string>
+    <string name="plus_button_description">ini adalah button plus</string>
+    <string name="minus_button_description">ini adalah button minus</string>
 </resources>
