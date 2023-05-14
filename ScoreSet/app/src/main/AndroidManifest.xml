@@ -12,7 +12,10 @@
         android:theme="@style/Theme.ScoreSetAplication"
         tools:targetApi="31">
         <activity
-            android:name=".BadmintonScore"
+            android:name=".ScoreFootballActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScorePingpongActivity"
             android:exported="false" />
         <activity
             android:name=".FootballScore"

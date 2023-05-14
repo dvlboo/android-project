@@ -1,16 +1,17 @@
 package com.example.scoresetaplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RvAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         ImageView ivImage = holder.ivImage;
         TextView txtJudul = holder.txtJudul;
@@ -39,8 +40,14 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
         txtJudul.setText(dataItem.get(position).getTitle());
         txtDesc.setText(dataItem.get(position).getDesc());
 
-        holder.parentLayout.setOnClickListener(view -> {
-            Toast.makeText(context,"Anda memilih" + dataItem.get(position).getTitle() , Toast.LENGTH_SHORT).show();
+        holder.cvSports.setOnClickListener(view -> {
+            Toast.makeText(context,"Anda memilih " + dataItem.get(position).getTitle() , Toast.LENGTH_SHORT).show();
+
+            if (dataItem.get(position).getTitle().equals("Tennis")){
+                context.startActivity(new Intent(context, ScorePingpongActivity.class));
+            }if (dataItem.get(position).getTitle().equals("Football")){
+                context.startActivity(new Intent(context, ScoreFootballActivity.class));
+            }
         });
 
     }
@@ -55,6 +62,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
         ImageView ivImage;
         TextView txtJudul, txtDesc;
         LinearLayoutCompat parentLayout;
+        CardView cvSports;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -62,8 +70,9 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
             txtJudul = itemView.findViewById(R.id.tv_Title);
             txtDesc = itemView.findViewById(R.id.tv_Description);
             parentLayout = itemView.findViewById(R.id.parentLayout);
-
+            cvSports = itemView.findViewById(R.id.cv_CardSports);
         }
+
     }
 
     RvAdapter(Context context, ArrayList<ItemModel> dataItem) {

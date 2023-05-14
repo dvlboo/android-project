@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -7,31 +8,36 @@
     android:id="@+id/parentLayout">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_CardSports"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardCornerRadius="10px">
+        app:cardCornerRadius="10px"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true">
 
         <ImageView
             android:id="@+id/iv_BgSport"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:src="@drawable/badminton"
+            android:layout_height="95dp"
+            android:src="@drawable/tennis"
+            android:elevation="1dp"
             />
         <TextView
             android:id="@+id/tv_Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Badminton"
-            android:layout_marginTop="80dp"
+            android:text="Sports Name"
+            android:layout_marginTop="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:elevation="2dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="125dp"
+            android:layout_marginTop="105dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:text="News"
@@ -41,7 +47,7 @@
             android:id="@+id/tv_Description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="130dp"
             android:text="Ini adalah penghitungan skor Badminton"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
