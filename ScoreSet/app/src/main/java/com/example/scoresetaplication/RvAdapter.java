@@ -43,7 +43,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
         holder.cvSports.setOnClickListener(view -> {
             Toast.makeText(context,"Anda memilih " + dataItem.get(position).getTitle() , Toast.LENGTH_SHORT).show();
 
-            if (dataItem.get(position).getTitle().equals("Tennis")){
+            if (dataItem.get(position).getTitle().equals("Ping Pong")){
                 context.startActivity(new Intent(context, ScorePingpongActivity.class));
             }if (dataItem.get(position).getTitle().equals("Football")){
                 context.startActivity(new Intent(context, ScoreFootballActivity.class));

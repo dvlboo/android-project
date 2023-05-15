@@ -13,11 +13,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <ImageView
+            android:id="@+id/iv_P1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/edit_vector"
+            />
+
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:marginEnd="10dp"
+            android:layout_weight="4"
+            android:inputType="text"
             android:hint="Nama Player 1"
             android:textAlignment="center"
             />
@@ -25,10 +33,18 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:marginStart="10dp"
+            android:layout_weight="4"
+            android:inputType="text"
             android:hint="Nama Player 2"
             android:textAlignment="center"
+            />
+
+        <ImageView
+            android:id="@+id/iv_P2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/edit_vector"
             />
 
     </LinearLayout>
@@ -106,22 +122,26 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_incrementScoreP1"
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="2"
             android:layout_margin="5dp"
-            app:cardCornerRadius="3dp">
+            android:clickable="true"
+            app:cardCornerRadius="3dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="incrementScore">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/tv_ScoreP1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="0"
-                    />
+                    android:text="0" />
 
             </RelativeLayout>
 
@@ -135,28 +155,36 @@
             android:layout_margin="5dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_incrementSetP1"
                 android:layout_width="match_parent"
-                android:layout_height="70dp">
+                android:layout_height="70dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="incrementSet">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
+                        android:id="@+id/tv_SetP1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="0"
-                        />
+                        android:text="0" />
 
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_decrementSetP1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="decrementSet">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -166,7 +194,9 @@
 
             </androidx.cardview.widget.CardView>
 
-        </LinearLayout><LinearLayout
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -174,28 +204,36 @@
             android:layout_margin="5dp">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_incrementSetP2"
             android:layout_width="match_parent"
-            android:layout_height="70dp">
+            android:layout_height="70dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="incrementSet">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/tv_SetP2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="0"
-                    />
+                    android:text="0" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_decrementSetP2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="decrementSet">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -211,22 +249,26 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_incrementScoreP2"
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="2"
             android:layout_margin="5dp"
-            app:cardCornerRadius="3dp">
+            android:clickable="true"
+            app:cardCornerRadius="3dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="incrementScore">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/tv_ScoreP2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="0"
-                    />
+                    android:text="0" />
 
             </RelativeLayout>
 
@@ -239,6 +281,7 @@
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_decrementScoreP1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -246,40 +289,47 @@
             android:layout_marginEnd="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            >
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="decrementScore">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/min_vector"
-                />
+                android:src="@drawable/min_vector"/>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_repeatAll"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
+            android:clickable="true"
+            android:onClick="repeatAll"
+            android:foreground="?attr/selectableItemBackground"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/repeat_vector"
-                />
+                android:src="@drawable/repeat_vector"/>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_decrementScoreP2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="decrementScore">
 
             <ImageView
                 android:layout_width="match_parent"
